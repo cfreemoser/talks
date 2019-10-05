@@ -12,5 +12,5 @@ jobs:
         FTP_SERVER: ${{ secrets.FTP_HOST }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        REMOTE_DIR: talks 
+        REMOTE_DIR: /talks 
         ARGS: --delete
