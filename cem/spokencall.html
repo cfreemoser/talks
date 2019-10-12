@@ -492,12 +492,9 @@
                 <div class="wrap">
 
                   <div class="card-50">
+                    <div >
+                        <h2>Training a Word2Vec Model</h2>
 
-                    <div class="flex-content">
-                            <h2>Training a Word2Vec Model</h2>
-                               <p>Using the Skipgram approch: From a target word the sercounding words a predeicted. </br>
-                                The demension of the hiddenlayer is the demension of the word embeddings
-                            </p> 
                         <div class="table-scrollable">
                                 <table>
                                     <thead>
@@ -536,7 +533,7 @@
 
                     <!-- end .flex-content-->
                     <figure>
-                      <img class="aligncenter" src="img/spokencall/nn.png" alt="iPhone">
+                      <img class="aligncenter"  style="height:60%;" src="img/spokencall/nn.png" alt="iPhone">
                     </figure>
                   </div>
                   <!-- .end card-50 -->
@@ -544,14 +541,63 @@
                 <!-- .end .wrap -->
               </section>
 
-              <section class="slide current" id="section-6" style="">
-                    <!--.wrap = container (width: 90%) -->
-                    <div class="wrap size-50 frame">
-                      <h2 class="text-serif aligncenter">Context can be more!</h2>
-                      <p class="text-symbols">* * *</p>
-                      <p>Stores have the power to change the world. WebSlides helps you write better content, faster. Your slides are there to support your story. Choose words wisely, create meaning with them, keep it simplie.</p>
+                <section id="section-25" class="slide current" style="">
+                    <div class="wrap">
+                        <h3>Vector-oriented reasoning</h3>
+                        <p>Doing <b>Math</b> with words</p>
+                        <ul class="flexblock blink border">
+                            <li>
+                                <a>
+                                <!--div required = padding li or li>a-->
+                                <div>
+                                    <h3>Singular/plural relation</h3>
+                                    Word2Vec is able to understand the relation between plural and singular of words
+                                    $$\left (\overrightarrow{cat} - \overrightarrow{cats} \right ) \approx \left
+                                    (\overrightarrow{car} - \overrightarrow{cars} \right )$$
+                                </div>
+                            </a>
+                            </li>
+                            <li>
+                                <a>
+                                <!--div required = padding li or li>a-->
+                                <div>
+                                    <h3>Distance between words</h3>
+                                    Word2Vec can calculate the distance between words to find simulatiry
+                                    $$\left \| \overrightarrow{men} - \overrightarrow{cat} \right \| = 0.7130494$$
+                                </div>
+                            </a>
+                            </li>
+                
+                        </ul>
+                        <ul class="flexblock blink border">
+                            <li>
+                                <!--div required = padding li or li>a-->
+                                <a>
+                                <div>
+                                    <h3>answering analogy questions</h3>
+                                    World analogies can be resolved with word2vec 
+                                    $$\overrightarrow{x} = \overrightarrow{men} + \left (\overrightarrow{woman} -
+                                    \overrightarrow{queen} \right )$$
+                                </div>
+                            </a>
+                            </li>
+                            <li>
+                                <!--div required = padding li or li>a-->
+                                <a>
+                                <div>
+                                    <h3>Element-wise addition</h3>
+                                    Element-wise addition can be used to reveal relationships
+                                    $$\overrightarrow{German} + \overrightarrow{airline} =
+                                    \overrightarrow{Lufthansa}$$
+                                </div>
+                            </a>
+                            </li>
+                
+                        </ul>
                     </div>
-                  </section>
+                    <!-- .end .wrap -->
+                </section>
+            
               
         </article>
     </main>
@@ -574,7 +620,8 @@
 
     <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
     <script defer src="../static/js/svg-icons.js"></script>
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>
