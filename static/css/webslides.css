@@ -1889,6 +1889,9 @@ About, Philosophy...
 .card-50 .metrics li {
   width: 50%; }
 
+.card-20 .metrics li {
+  width: 20%; }
+
 /*=====================================================
 6.5 Specs/Items: <ul class="flexblock specs">
 ======================================================= */
