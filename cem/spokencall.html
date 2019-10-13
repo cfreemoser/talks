@@ -390,10 +390,6 @@
             </section>
 
 
-
-
-
-
             <section class="slide current" id="section-81" style="">
                 <div class="wrap">
                     <h2 class="aligncenter">Encoding</h2>
@@ -452,30 +448,28 @@
                 <span class="background dark"
                     style="background-image:url('http://ruder.io/content/images/size/w2000/2016/04/word_embeddings_colah.png')"></span>
                 <div class="wrap size-50">
-            
-                    <ul class="flexblock blink">
-                        <li>
-                            <a>
-                                <h2><code>Word2Vec is an algorithm that accepts text corpus as an input and outputs a vector representation for each word. 
-                                    It consits of a two-layer neural net, which learns the semantic behind the words
-                                </code></h2>
-                            </a>
-                        </li>
-                    </ul>
+                        <h3><code>Word2Vec</code></h3>
+        
+                        <p><code> Word2Vec is an algorithm that accepts text corpus as an input and outputs a vector representation for each word. 
+                                It consits of a two-layer neural net, which learns the semantic behind the.
+                        </code>
+                        </p>
+                    
                 </div>
             </section>
 
 
             <section class="slide current" id="section-6" style="">
                 <div class="wrap">
-                    <h1>Learning <span>the</span> meaning</h1>
+                    <h1>Word2Vec training approces</h1>
+                    <p>Two ways how we can learn semantic</p>
                     <ul class="flexblock features fadeInUp">
                         <li>
                             <div>
                                 <h2>Skip-gram</h2>
-                                We try to predict the context from the target word
-                                <div class="flexblock">
-                                    <img style="width:100%;" src="img/spokencall/skip_gram.png" />
+                                Given a set of sentences the model loops on the words of each sentence tries to use the <strong>current word w in order to predict its neighbors</strong>
+                                <div class="content-center">
+                                    $$\text{w} \rightarrow  \text{w}_{p+2}, \text{w} \rightarrow  \text{w}_{p+1} , \text{w} \rightarrow  \text{w}_{p-1}, \text{w} \rightarrow  \text{w}_{p-2}$$
                                 </div>
 
                             </div>
@@ -485,9 +479,9 @@
                                 <h2>
                                     CBOW
                                 </h2>
-                                We try to predict the target word form the context
-                                <div class="flexblock">
-                                    <img style="width:100%;" src="img/spokencall/cbow.png" />
+                                Given a set of sentences the model loops on the words of each sentence tries to use <strong>the surrounding words to predict the current word w</strong>
+                                <div class="content-center">
+                                    $$\text{w}_{p-2} \rightarrow  \text{w}, \text{w}_{p-1} \rightarrow  \text{w} , \text{w}_{p+2} \rightarrow  \text{w}, \text{w}_{p+1} \rightarrow  \text{w}$$
                                 </div>
                             </div>
                         </li>
@@ -535,6 +529,7 @@
                                 </table>
                                 <p><span>Skip-Gram</span></p>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="content-left">
@@ -609,34 +604,25 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section id="section-14" class="slide current" style="">
-                <div class="wrap">
-                    <div class="grid vertical-align">
-                        <div class="column">
-                            <h2>
-                                Doc2Vec
-                            </h2>
-                            <p class="text-intro">
-                                The diagram is based on the CBOW model,
-                                but instead of using just nearby words to predict the word,
-                                another vector, the so called document-unique, is added.
-                                By training the word vectors, the document vector is trained as well.
-                                In the end of training, it holds a numeric representation of the document.
-                            </p>
-                            <p>V = Number of Words <br>
-                                C = Number of Documents</p>
-                        </div>
-                        <!-- end .column-->
-                        <div class="column">
-                            <figure>
-                                <img src="img/spokencall/doc2vec.png" alt="Pixel Phone">
-                            </figure>
-                        </div>
-                        <!-- end figure-->
+
+
+            <section class="bg-black aligncenter slide current" id="section-97" style="">
+                    <span class="background dark"
+                        style="background-image:url('https://i2.wp.com/mlexplained.com/wp-content/uploads/2017/12/doc2vec.png?fit=1200%2C667&ssl=1')"></span>
+                    <div class="wrap size-50">
+                
+                                    <h3><code>Doc2Vec</code></h3>
+        
+                                <p><code> We can extend the <strong>Word2Vec</strong> model by adding another vector, 
+                                    the so called document-unique, to learn the vector representation of whole documents.
+                                </code>
+                                </p>
+        
                     </div>
-                    <!-- end .grid-->
-                </div>
-                <!-- end .wrap-->
+                </section>
+
+                    
+                    <!-- .end .wrap -->
             </section>
 
             <section id="section-the-problem" class="frame bg-blue aligncenter slide current" style="">
