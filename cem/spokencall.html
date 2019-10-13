@@ -633,6 +633,51 @@
                 <!-- .end .wrap -->
             </section>
 
+
+            <section id="section-74" class="slide current" style="">
+                    <div class="wrap">
+                      <div class="card-40 bg-white">
+                        <figure>
+                            <div class="content-center">
+                                <p>
+                                $$\begin{pmatrix}
+                                \left \| \overrightarrow{tscp} - \overrightarrow{ref_{0}} \right \|\\ 
+                                \left \| \overrightarrow{tscp} - \overrightarrow{ref_{1}} \right \|\\ 
+                                \left \| \overrightarrow{tscp} - \overrightarrow{ref_{2}} \right \|\\
+                                [...] \\
+                                \left \| \overrightarrow{tscp} - \overrightarrow{ref_{7}} \right \|\\
+                                \left \| \overrightarrow{tscp} - \overrightarrow{ref_{8}} \right \|\\
+                                \left \| \overrightarrow{tscp} - \overrightarrow{ref_{9}} \right \|
+                                \end{pmatrix}$$
+                            </p>
+                            </div>
+                          </figcaption>
+                        </figure>
+                        <!-- end figure-->
+                        <div class="flex-content">
+                          <h2>
+                            Idea behind the Model
+                          </h2>
+                          <p>Features to base a Judgmend on</p>
+                          <ul class="description">
+                            <li>
+                              <strong class="text-label">1:</strong> Transform Transcript with Doc2Vec</sup>
+                            </li>
+                            <li><strong class="text-label">2:</strong> Transform ten top with reference answeres</li>
+                            <li><strong class="text-label">3:</strong> Calculate the distance between</li>
+                          </ul>
+                          <p>
+                              Each propmt is assoiated with a set of reference answeres to fullfill. Using the transcript we can compute the 
+                              distance between the childs response and the reference answer. Based on this distances we try to build a classifier
+                          </p>
+                        </div>
+                        <!-- end .flex-content-->
+                      </div>
+                      <!-- .end .card50 -->
+                    </div>
+                    <!-- .end .wrap -->
+                  </section>
+
             <section id="section-3" class="slide current" style="">
                 <!--.wrap = container (width: 90%) -->
                 <div class="wrap">
