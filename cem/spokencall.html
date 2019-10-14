@@ -162,7 +162,7 @@
             <section id="section-4" class="slide current" style="">
                 <!--.wrap = container (width: 90%) -->
                 <div class="wrap size-60">
-                    <h3><strong>Spokencall</strong> What it is all about</h3>
+                    <h3><strong>Spokencall</strong> The Idea behind</h3>
                     <hr>
                     <div class="bg-white fadeInUp">
                         <ul class="flexblock reasons">
@@ -185,7 +185,7 @@
                                 <p>I would like my streak well down</p>
                             </li>
                             <li>
-                                <h2>Based on the Transcript a Judgmend is generated</h2>
+                                <h2>Based on the transcript a judgment is generated</h2>
                                 <p>I would like my streak well <b class="bg-red">down</b> </br> (Langugage: 0, Meaning:
                                     1)</p>
 
@@ -200,8 +200,7 @@
             <section id="section-5" class="slide current" style="">
                 <div class="wrap">
                     <h3><strong>Two Systems</strong> one chain</h3>
-                    <p>The Shared Task consists of two different task. One is to build the Speech-processing engine
-                        and the other one is about creating the text-processing engine
+                    <p>The Shared Task consists of two different tasks. One is to build the Speech-processing engine and the other one is about creating the text-processing engine
                     </p>
                     <ul class="flexblock steps">
                         <!-- li>a? Add blink = <ul class="flexblock steps blink">-->
@@ -338,7 +337,7 @@
                                 </svg>
                             </span>
                             <h2>02. Text-processing</h2>
-                            <p>The transcript is processed to generate a Judgment</p>
+                            <p>The transcript is processed to generate a judgment</p>
                             <br>
                             <p> <a target="_blank" href="https://keras.io/">#Keras</a> <a target="_blank"
                                     href="https://radimrehurek.com/gensim/">#Gensim</a> </p>
@@ -351,7 +350,7 @@
             <section id="section-6" class="frame bg-blue aligncenter slide current" style="">
                 <div class="wrap">
                     <h2 class="text-landing">Theory behind the model</h2>
-                    <p>How to classify</p>
+                    <p>Some NLP basics</p>
                 </div>
                 <!-- .end .wrap -->
             </section>
@@ -423,8 +422,7 @@
                 <div class="wrap size-50">
                     <h3><code>Word2Vec</code></h3>
 
-                    <p><code> Word2Vec is an algorithm that accepts text corpus as an input and outputs a vector representation for each word. 
-                                It consits of a two-layer neural net, which learns the semantic behind the.
+                    <p><code> Word2Vec is an algorithm that accepts text corpus as an input and outputs a vector representation for each word. It consists of a two-layer neural net, which learns the semantic behind the.
                         </code>
                     </p>
 
@@ -440,7 +438,7 @@
                         <li>
                             <div>
                                 <h2>Skip-gram</h2>
-                                Given a set of sentences the model loops on the words of each sentence tries to use the
+                                Given a set of sentences, the model loops on the words of each sentence trying to use the
                                 <strong>current word w in order to predict its neighbors</strong>
                                 <div class="content-center">
                                     $$\text{w} \rightarrow \text{w}_{p+2}, \text{w} \rightarrow \text{w}_{p+1} ,
@@ -454,7 +452,7 @@
                                 <h2>
                                     CBOW
                                 </h2>
-                                Given a set of sentences the model loops on the words of each sentence tries to use
+                                Given a set of sentences, the model loops on the words of each sentence trying to use the
                                 <strong>the surrounding words to predict the current word w</strong>
                                 <div class="content-center">
                                     $$\text{w}_{p-2} \rightarrow \text{w}, \text{w}_{p-1} \rightarrow \text{w} ,
@@ -593,7 +591,7 @@
             <section id="section-15" class="frame bg-blue aligncenter slide current" style="">
                 <div class="wrap">
                     <h2 class="text-landing">Building a Model</h2>
-                    <p>How get a Judgment</p>
+                    <p>How to compute a judgment</p>
                 </div>
                 <!-- .end .wrap -->
             </section>
@@ -621,22 +619,19 @@
                         <!-- end figure-->
                         <div class="flex-content">
                             <h2>
-                                Idea behind the Model
+                                The Idea behind the Model
                             </h2>
-                            <p>Features to base a Judgmend on</p>
+                            <p>Features to base a judgment on</p>
                             <ul class="description">
                                 <li>
-                                    <strong class="text-label">1:</strong> Transform Transcript with Doc2Vec</sup>
+                                    <strong class="text-label">1:</strong> Transform transcript with Doc2Vec</sup>
                                 </li>
                                 <li><strong class="text-label">2:</strong> Transform ten top with reference answeres
                                 </li>
                                 <li><strong class="text-label">3:</strong> Calculate the distance between</li>
                             </ul>
                             <p>
-                                Each propmt is assoiated with a set of reference answeres to fullfill. Using the
-                                transcript we can compute the
-                                distance between the childs response and the reference answer. Based on this distances
-                                we try to build a classifier
+                                Each prompt is associated with a set of reference answeres to fulfill the given task. Using Doc2Vec the distance between the child's response and the reference answers can be computed. Based on those distances a judgment can be given
                             </p>
                         </div>
                         <!-- end .flex-content-->
@@ -653,11 +648,11 @@
                     <div class="grid vertical-align">
                         <div class="column">
                             <h3><strong>Architcture of the Classifier</strong></h3>
-                            <p class="text-intro">Binary classifier based on the distance of the ten top most reference
+                            <p class="text-intro">A Binary classifier based on the distance of the ten top most reference
                                 answers to a prompt</p>
                             <ul class="description">
                                 <li>
-                                    <strong class="text-label">Input :</strong> Distances between reference grammer and
+                                    <strong class="text-label">Input :</strong> Distances between reference grammar and
                                     transcript
                                 </li>
                                 <li><strong class="text-label">Layers:</strong> 2-Hidden Layeres</li>
@@ -673,7 +668,7 @@
                     </div>
                     <!-- .end .grid -->
                     <hr>
-                    <p class="aligncenter">Model is build with <code>Keras</code></p>
+                    <p class="aligncenter">Model based on <code>Keras</code></p>
                 </div>
                 <!-- .end .wrap -->
             </section>
@@ -708,7 +703,7 @@
 
                           </pre>
                     <hr>
-                    <p class="aligncenter">Model is build with <code>Keras</code></p>
+                    <p class="aligncenter">Model based on <code>Keras</code></p>
                 </div>
                 <!-- .end .wrap -->
             </section>
@@ -738,7 +733,7 @@
                     <!-- end figure-->
                     <div class="flex-content">
                         <h3>Things you want at some point...</h3>
-                        <p>When the chaouse start to grow</p>
+                        <p>When the chaos starts to grow</p>
                         <hr>
                         <div class="grid">
                             <div class="column">
@@ -787,7 +782,7 @@
                         </svg>
 
                         Polyaxon</h3>
-                    <p class="text-intro">Scale your data science infrastructure independently of the cloud provider
+                    <p class="text-intro">Operating machine learning experiments on Kubernetes
                     </p>
                     <pre> <div class="grid vertical-align">
                                 <div class="column ">
