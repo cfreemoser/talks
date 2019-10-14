@@ -78,7 +78,7 @@
         -->
 
 
-            <section class="fullscreen bg-blue aligncenter slide current" id="section-21" style="">
+            <section class="fullscreen bg-blue aligncenter slide current" id="section-1" style="">
                 <div class="embed dark">
                     <video autoplay loop muted poster="https://source.unsplash.com/n6B49lTx7NM">
                         <source
@@ -96,7 +96,7 @@
             </section>
 
 
-            <section id="section-27" class="slide current" style="">
+            <section id="section-2" class="slide current" style="">
                 <div class="wrap">
                     <h3>Team</h3>
                     <ul class="flexblock gallery">
@@ -150,7 +150,7 @@
             </section>
 
 
-            <section id="section-the-problem" class="frame bg-blue aligncenter slide current" style="">
+            <section id="section-3" class="frame bg-blue aligncenter slide current" style="">
                 <div class="wrap">
                     <h2 class="text-landing">The Problem</h2>
                     <p>What is it all about</p>
@@ -159,7 +159,7 @@
             </section>
 
 
-            <section id="section-7" class="slide current" style="">
+            <section id="section-4" class="slide current" style="">
                 <!--.wrap = container (width: 90%) -->
                 <div class="wrap size-60">
                     <h3><strong>Spokencall</strong> What it is all about</h3>
@@ -168,7 +168,8 @@
                         <ul class="flexblock reasons">
                             <li cla>
                                 <h2>A Prompt is shown to the child</h2>
-                                <p>Translate: Mein Steak durchgebraten <br><span>Искам пържолата ми да е добре изпечена</span></p>
+                                <p>Translate: Mein Steak durchgebraten <br><span>Искам пържолата ми да е добре
+                                        изпечена</span></p>
                             </li>
                             <li>
                                 <h2>The child fullfills the task by speech</h2>
@@ -196,7 +197,7 @@
             </section>
 
 
-            <section id="section-56" class="slide current" style="">
+            <section id="section-5" class="slide current" style="">
                 <div class="wrap">
                     <h3><strong>Two Systems</strong> one chain</h3>
                     <p>The Shared Task consists of two different task. One is to build the Speech-processing engine
@@ -347,7 +348,7 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section id="section-the-problem" class="frame bg-blue aligncenter slide current" style="">
+            <section id="section-6" class="frame bg-blue aligncenter slide current" style="">
                 <div class="wrap">
                     <h2 class="text-landing">Theory behind the model</h2>
                     <p>How to classify</p>
@@ -356,19 +357,19 @@
             </section>
 
 
-            <section class="slide current" id="section-85" style="">
+            <section class="slide current" id="section-7" style="">
                 <!--.wrap = container (width: 90%) -->
                 <div class="wrap size-50">
                     <blockquote class="text-quote">
                         <p>Zühlke is a great employer.</p>
-                        <p><cite><a href="https://twitter.com/jlantunez">Some employee</a></cite></p>
+                        <p><cite><a href="https://www.zuehlke-careers.com/">Some employee</a></cite></p>
                     </blockquote>
                 </div>
                 <!-- .end .wrap -->
             </section>
 
 
-            <section class="slide current" id="section-81" style="">
+            <section class="slide current" id="section-8" style="">
                 <div class="wrap">
                     <h2 class="aligncenter">Encoding</h2>
                     <p class="aligncenter">From words to vectors</p>
@@ -408,7 +409,7 @@
             </section>
 
 
-            <section class="bg-black slide-bottom slide current" id="section-20" style="">
+            <section class="bg-black slide-bottom slide current" id="section-9" style="">
                 <span class="background dark"
                     style="background-image:url('https://source.unsplash.com/Oaqk7qqNh_c/')"></span>
                 <div class="wrap">
@@ -422,7 +423,7 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section class="bg-black aligncenter slide current" id="section-97" style="">
+            <section class="bg-black aligncenter slide current" id="section-10" style="">
                 <span class="background dark"
                     style="background-image:url('http://ruder.io/content/images/size/w2000/2016/04/word_embeddings_colah.png')"></span>
                 <div class="wrap size-50">
@@ -437,7 +438,7 @@
             </section>
 
 
-            <section class="slide current" id="section-6" style="">
+            <section class="slide current" id="section-11" style="">
                 <div class="wrap">
                     <h1>Word2Vec training approces</h1>
                     <p>Two ways how we can learn semantic</p>
@@ -472,56 +473,56 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section class="fullscreen bg-blue aligncenter slide current" id="section-21" style="">
-                    <div class="embed dark">
-                      <video autoplay loop="" muted="" poster="https://webslides.tv/static/images/peggy.jpg">
+            <section class="fullscreen bg-blue aligncenter slide current" id="section-12" style="">
+                <div class="embed dark">
+                    <video autoplay loop="" muted="" poster="https://webslides.tv/static/images/peggy.jpg">
                         <source src="img/spokencall/word2vec.mp4" type="video/mp4">
-                      </video>
+                    </video>
+                </div>
+                <!-- .end .embed -->
+                <div class="warp content-left">
+                    <h2>Training Word2Vec </h2>
+                    <p>Using Skip-gram</p>
+                    <div class="table-scrollable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sentence</th>
+                                    <th>Training examples</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td><strong>Zühlke</strong> is a great employer.</td>
+                                    <td>(Zühlke,is) (Zühlke,a)</td>
+                                </tr>
+                                <tr>
+                                    <td>Zühlke <strong>is</strong> a great employer.</td>
+                                    <td>(is,Zühlke) (is,a) (is, great)</td>
+                                </tr>
+                                <tr>
+                                    <td>Zühlke is <strong>a</strong> great employer.</td>
+                                    <td>(a,is) (a,Zühlke) (a,great) (a,employer)</td>
+                                </tr>
+                                <tr>
+                                    <td>Zühlke is a <strong>great</strong> employer.</td>
+                                    <td>(great,a) (great,is) (great,employer)</td>
+                                </tr>
+                                <tr>
+                                    <td>Zühlke is a great <strong>employer</strong>.</td>
+                                    <td>(employer,great) (employer,a)</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- .end .embed -->
-                    <div class="warp content-left">
-                            <h2>Training Word2Vec </h2>
-                            <p>Using Skip-gram</p>
-                            <div class="table-scrollable">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Sentence</th>
-                                            <th>Training examples</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
 
-                                        <tr>
-                                            <td><strong>Zühlke</strong> is a great employer.</td>
-                                            <td>(Zühlke,is) (Zühlke,a)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zühlke <strong>is</strong> a great employer.</td>
-                                            <td>(is,Zühlke) (is,a) (is, great)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zühlke is <strong>a</strong> great employer.</td>
-                                            <td>(a,is) (a,Zühlke) (a,great) (a,employer)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zühlke is a <strong>great</strong> employer.</td>
-                                            <td>(great,a) (great,is) (great,employer)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zühlke is a great <strong>employer</strong>.</td>
-                                            <td>(employer,great) (employer,a)</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                    </div>
-                    <!-- .end .wrap -->
-                  </section>
+                </div>
+                <!-- .end .wrap -->
+            </section>
 
 
-            <section id="section-25" class="slide current" style="">
+            <section id="section-13" class="slide current" style="">
                 <div class="wrap">
                     <h3>Vector-oriented reasoning</h3>
                     <p>Doing <b>Math</b> with words</p>
@@ -579,8 +580,7 @@
             </section>
 
 
-
-            <section class="bg-black aligncenter slide current" id="section-97" style="">
+            <section class="bg-black aligncenter slide current" id="section-14" style="">
                 <span class="background dark"
                     style="background-image:url('https://i2.wp.com/mlexplained.com/wp-content/uploads/2017/12/doc2vec.png?fit=1200%2C667&ssl=1')"></span>
                 <div class="wrap size-50">
@@ -596,10 +596,7 @@
             </section>
 
 
-            <!-- .end .wrap -->
-            </section>
-
-            <section id="section-the-problem" class="frame bg-blue aligncenter slide current" style="">
+            <section id="section-15" class="frame bg-blue aligncenter slide current" style="">
                 <div class="wrap">
                     <h2 class="text-landing">Building a Model</h2>
                     <p>How get a Judgment</p>
@@ -608,7 +605,7 @@
             </section>
 
 
-            <section id="section-74" class="slide current" style="">
+            <section id="section-16" class="slide current" style="">
                 <div class="wrap">
                     <div class="card-40 bg-white">
                         <figure>
@@ -655,7 +652,8 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section id="section-3" class="slide current" style="">
+
+            <section id="section-17" class="slide current" style="">
                 <!--.wrap = container (width: 90%) -->
                 <div class="wrap">
                     <div class="grid vertical-align">
@@ -686,7 +684,8 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section id="section-11" class="slide current" style="">
+
+            <section id="section-18" class="slide current" style="">
                 <!-- Overlay/Opacity: [class*="bg-"] > .background.dark or .light -->
                 <span class="background"
                     style="background-image:url('https://source.unsplash.com/acJmkKwEMR4/')"></span>
@@ -707,7 +706,7 @@
             </section>
 
 
-            <section id="section-101" class="slide current" style="">
+            <section id="section-19" class="slide current" style="">
                 <div class="wrap size-60">
                     <h3><strong>Usage of optimizers</strong></h3>
                     <p class="text-intro">Stochastic gradient descent optimizer <strong>SGD</strong></p>
@@ -720,7 +719,7 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section class="bg-black-blue slide current" id="section-84" style="">
+            <section class="bg-black-blue slide current" id="section-20" style="">
                 <!--.wrap = container (width: 90%) -->
                 <div class="wrap">
                     <blockquote class="text-quote">
@@ -735,7 +734,7 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section class="fullscreen slide current" id="section-76" style="">
+            <section class="fullscreen slide current" id="section-21" style="">
                 <div class="card-30">
 
                     <figure>
@@ -776,7 +775,7 @@
                 <!-- end .card-50-->
             </section>
 
-            <section id="section-the-problem" class="frame bg-blue aligncenter slide current" style="">
+            <section id="section-22" class="frame bg-blue aligncenter slide current" style="">
                 <div class="wrap">
                     <h2 class="text-landing">Using Kubernetes</h2>
                     <p>scaling your experiments horizontally</p>
@@ -785,7 +784,7 @@
             </section>
 
 
-            <section id="section-19" class="slide current" style="">
+            <section id="section-23" class="slide current" style="">
                 <div class="wrap size-60">
                     <h3> Kubernetes
 
@@ -816,7 +815,7 @@
             </section>
 
 
-            <section id="section-40" class="slide current" style="">
+            <section id="section-24" class="slide current" style="">
                 <div class="wrap">
                     <h3>Polyaxon</h3>
                     <p>Why we choosed polyaxon</p>
@@ -1074,7 +1073,7 @@
             </section>
 
 
-            <section class="fullscreen slide current" id="section-76" style="">
+            <section class="fullscreen slide current" id="section-25" style="">
                 <div class="card-30">
                     <div class="wrap size-30 ">
                         <img src="https://miro.medium.com/max/1535/1*zKzSqWEHWPCmBFXRcBEk8g.png/" alt="Áqaba, Jordan">
@@ -1116,7 +1115,7 @@
                 <!-- end .card-50-->
             </section>
 
-            <section class="bg-black aligncenter slide current" id="section-44" style="">
+            <section class="bg-black aligncenter slide current" id="section-26" style="">
                 <span class="background dark"
                     style="background-image:url('https://source.unsplash.com/yRAK7Vcyl_Q/')"></span>
                 <div class="wrap">
@@ -1126,7 +1125,7 @@
                 <!-- .end .wrap -->
             </section>
 
-            <section id="section-54" class="slide current" style="">
+            <section id="section-27" class="slide current" style="">
                 <div class="wrap">
                     <h1>Take aways</h1>
                     <ul class="flexblock features">
@@ -1171,19 +1170,19 @@
                             </div>
                         </li>
                         <li>
-                                <div>
-                                    <h2>
-                                        NLP is fun
-                                    </h2>
-                                    Start your own experiments today!
-                                </div>
-                            </li>
+                            <div>
+                                <h2>
+                                    NLP is fun
+                                </h2>
+                                Start your own experiments today!
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <!-- .end .wrap -->
             </section>
 
-            <section class="bg-black aligncenter slide current" id="section-94" style="">
+            <section class="bg-black aligncenter slide current" id="section-28" style="">
                 <span class="background dark"
                     style="background-image:url('https://source.unsplash.com/Mm_cz9t0LYc/)"></span>
                 <div class="wrap">
@@ -1286,7 +1285,6 @@
             'script>'
         );
     </script>
-
 
 
     <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
