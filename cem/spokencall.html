@@ -168,11 +168,11 @@
                         <ul class="flexblock reasons">
                             <li cla>
                                 <h2>A Prompt is shown to the child</h2>
-                                <p>Translate: Mein Steak durchgebraten <br><span>Искам пържолата ми да е добре
+                                <p>Translate: Ich möchte mein Steak durchgebraten <br><span>Искам пържолата ми да е добре
                                         изпечена</span></p>
                             </li>
                             <li>
-                                <h2>The child fullfills the task by speech</h2>
+                                <h2>The child fulfills the task by speech</h2>
                                 <P>
                                     <audio controls>
                                         <source src="audio/40391.wav" type="audio/wav">
@@ -182,11 +182,11 @@
                             </li>
                             <li>
                                 <h2>The system generates a Transcript</h2>
-                                <p>I would like my streak well down</p>
+                                <p>I would like my steak well down</p>
                             </li>
                             <li>
                                 <h2>Based on the transcript a judgment is generated</h2>
-                                <p>I would like my streak well <b class="bg-red">down</b> </br> (Langugage: 0, Meaning:
+                                <p>I would like my steak well <b class="bg-red">down</b> </br> (Langugage: 0, Meaning:
                                     1)</p>
 
                             </li>
@@ -411,7 +411,7 @@
                 <span class="background dark" style="background-image:url('https://source.unsplash.com/Oaqk7qqNh_c/')"></span>
                 <div class="wrap">
                   <h2 class="text-data">620,000</h2>
-                  <h3>Words in the Oxfoard Dictionary of English</h3>
+                  <h3>Words in the Oxford Dictionary of English</h3>
                 </div>
                 <!-- .end .wrap -->
               </section>
@@ -432,7 +432,7 @@
 
             <section class="slide current" id="section-11" style="">
                 <div class="wrap">
-                    <h1>Word2Vec training approces</h1>
+                    <h1>Word2Vec training process</h1>
                     <p>Two ways how we can learn semantic</p>
                     <ul class="flexblock features fadeInUp">
                         <li>
@@ -453,7 +453,7 @@
                                     CBOW
                                 </h2>
                                 Given a set of sentences, the model loops on the words of each sentence trying to use the
-                                <strong>the surrounding words to predict the current word w</strong>
+                                <strong>surrounding words to predict the current word w</strong>
                                 <div class="content-center">
                                     $$\text{w}_{p-2} \rightarrow \text{w}, \text{w}_{p-1} \rightarrow \text{w} ,
                                     \text{w}_{p+2} \rightarrow \text{w}, \text{w}_{p+1} \rightarrow \text{w}$$
@@ -524,7 +524,7 @@
                                 <!--div required = padding li or li>a-->
                                 <div>
                                     <h3>Singular/plural relation</h3>
-                                    Word2Vec is able to understand the relation between plural and singular of words
+                                    Word2Vec is able to understand the relation between the plural and the singular of words
                                     $$\left (\overrightarrow{cat} - \overrightarrow{cats} \right ) \approx \left
                                     (\overrightarrow{car} - \overrightarrow{cars} \right )$$
                                 </div>
@@ -535,7 +535,7 @@
                                 <!--div required = padding li or li>a-->
                                 <div>
                                     <h3>Distance between words</h3>
-                                    Word2Vec can calculate the distance between words to find simulatiry
+                                    Word2Vec can calculate the distance between words to find similarity
                                     $$\left \| \overrightarrow{dog} - \overrightarrow{cat} \right \| = 0.7130494$$
                                 </div>
                             </a>
@@ -547,8 +547,8 @@
                             <!--div required = padding li or li>a-->
                             <a>
                                 <div>
-                                    <h3>answering analogy questions</h3>
-                                    World analogies can be resolved with word2vec
+                                    <h3>Answering analogy questions</h3>
+                                    World analogies can be resolved with Word2Vec
                                     $$\overrightarrow{x} = \overrightarrow{men} + \left (\overrightarrow{woman} -
                                     \overrightarrow{queen} \right )$$
                                 </div>
@@ -626,12 +626,12 @@
                                 <li>
                                     <strong class="text-label">1:</strong> Transform transcript with Doc2Vec</sup>
                                 </li>
-                                <li><strong class="text-label">2:</strong> Transform ten top with reference answeres
+                                <li><strong class="text-label">2:</strong> Associate the transcript with the ten most referenced answers
                                 </li>
-                                <li><strong class="text-label">3:</strong> Calculate the distance between</li>
+                                <li><strong class="text-label">3:</strong> Calculate the distance between the transcript and the answers</li>
                             </ul>
                             <p>
-                                Each prompt is associated with a set of reference answeres to fulfill the given task. Using Doc2Vec the distance between the child's response and the reference answers can be computed. Based on those distances a judgment can be given
+                                Each prompt is associated with a set of reference answers to fulfill the given task. Using Doc2Vec, the distance between the child's response and the reference answers can be computed. Based on those distances a judgment can be made.
                             </p>
                         </div>
                         <!-- end .flex-content-->
@@ -648,15 +648,15 @@
                     <div class="grid vertical-align">
                         <div class="column">
                             <h3><strong>Architcture of the Classifier</strong></h3>
-                            <p class="text-intro">A Binary classifier based on the distance of the ten top most reference
+                            <p class="text-intro">A Binary classifier based on the distance of the ten most referenced
                                 answers to a prompt</p>
                             <ul class="description">
                                 <li>
                                     <strong class="text-label">Input :</strong> Distances between reference grammar and
                                     transcript
                                 </li>
-                                <li><strong class="text-label">Layers:</strong> 2-Hidden Layeres</li>
-                                <li><strong class="text-label">Outout :</strong> Binary Judgment - reject or accept</li>
+                                <li><strong class="text-label">Layers:</strong> 2-Hidden Layers</li>
+                                <li><strong class="text-label">Output :</strong> Binary Judgment - reject or accept</li>
                             </ul>
                         </div>
                         <!-- .end .column -->
@@ -681,8 +681,8 @@
                 <div class="wrap">
                     <div class="content-left bg-trans-dark fadeInUp">
                         <blockquote class="text-quote">
-                            <p>Optimizers update the weight parameters to minimize the loss function. Loss function acts
-                                as guides to the terrain telling optimizer if it is moving in the right direction to
+                            <p>Optimizers update the weight parameters to minimize the loss function. The loss function acts
+                                as a guide for the terrain, telling the optimizer if it is moving in the right direction to
                                 reach the bottom of the valley, the global minimum.</p>
                             <p><cite><a
                                         href="https://medium.com/datadriveninvestor/overview-of-different-optimizers-for-neural-networks-e0ed119440c3"></a>
@@ -712,7 +712,7 @@
                 <!--.wrap = container (width: 90%) -->
                 <div class="wrap">
                     <blockquote class="text-quote">
-                        <p>If you have to specify a model parameter manually then it is probably a model hyperparameter.
+                        <p>If you have to specify a model parameter manually, it is probably a model hyperparameter.
                         </p>
                         <p><cite><a
                                     href="https://machinelearningmastery.com/difference-between-a-parameter-and-a-hyperparameter/">machinelearningmastery.com
@@ -739,21 +739,20 @@
                             <div class="column">
                                 <h6>Isolated environments</h6>
                                 <p>Different frameworks have different dependencies. For example, to train a Doc2Vec
-                                    model you will need other libraries like for a keras classifier.</p>
+                                    model you will need other libraries than for a keras classifier.</p>
                                 <p class="text-symbols">* * *</p>
                                 <h6>ManagedResources</h6>
-                                <p>Some experiments will go on the GPU while others will need more CPU and others will
-                                    need more memory.</p>
+                                <p>Some experiments will run on the GPU while others will need more CPU or memory.</p>
                             </div>
                             <!-- end .column -->
                             <div class="column">
                                 <h6>Versioning</h6>
-                                <p>With the hyperparmeter search the parameters of a model are changed. You want to
-                                    version the models so you can compare changes
+                                <p>With the hyperparameter search the parameters of a model are changed. You want to
+                                    version the models so you can compare changes.
                                 </p>
                                 <p class="text-symbols">* * *</p>
                                 <h6>Scaling</h6>
-                                <p>You want to run your experiments on as many computers as possible at the same time
+                                <p>You want to run your experiments on as many computers as possible at the same time.
                                 </p>
                             </div>
                             <!-- end .column -->
@@ -807,7 +806,7 @@
             <section id="section-24" class="slide current" style="">
                 <div class="wrap">
                     <h3>Polyaxon</h3>
-                    <p>Why we choosed polyaxon</p>
+                    <p>Why we chose polyaxon</p>
                     <ul class="flexblock features">
                         <li>
                             <svg class="" data-cy="versioning-icon" version="1.1" viewBox="0 0 511.997 511.997"
@@ -838,9 +837,9 @@
                             <div>
 
 
-                                <h2> Versioning and reproducibility
+                                <h2> Versioning and reproducability
                                 </h2>
-                                Reproducible results with a built-in version control for code and experiments.
+                                Reproducable results with a built-in version control for code and experiments.
                             </div>
                         </li>
                         <li>
@@ -877,9 +876,9 @@
                             </svg>
                             <div>
                                 <h2>
-                                    Hyperparameters search
+                                    Hyperparameter search
                                 </h2>
-                                Run group of experiments in parallel and in distributed way.
+                                Run group of experiments in parallel and in a distributed way.
                             </div>
                         </li>
                         <li>
@@ -1072,14 +1071,14 @@
                     <div class="flex-content">
                         <h2>Polyaxon Concepts
                         </h2>
-                        <p>Running you Models</p>
+                        <p>Running your Models</p>
                         <ul class="flexblock specs">
                             <li>
                                 <div>
                                     <h2>Project</h2>
                                     A Project in Polyaxon is very similar to a project in GitHub, it aims at organizing
                                     your efforts to solve a specific problem. A project consist of a name and a
-                                    description, the code to execute, the data, and a polyaxonfile.yml.
+                                    description, the code to execute, the data and a polyaxonfile.yml.
                                 </div>
                             </li>
                             <li>
@@ -1087,14 +1086,14 @@
                                     <h2>Experiment</h2>
                                     An Experiment is the execution of your model with data and the provided parameters
                                     on the cluster. An Experiment Job is the Kubernetes pod running on the cluster for a
-                                    specific experiment
+                                    specific experiment.
                                 </div>
                             </li>
                             <li>
                                 <div>
                                     <h2>Experiment Group</h2>
                                     A selection of experiments to compare. It might be the same version of your model
-                                    and data with different hyper parameters based on a hyperparameters search algorithm
+                                    and data, but with different hyperparameters based on a hyperparameter search algorithm.
                                 </div>
                             </li>
                         </ul>
@@ -1116,14 +1115,14 @@
 
             <section id="section-27" class="slide current" style="">
                 <div class="wrap">
-                    <h1>Take aways</h1>
+                    <h1>Takeaways</h1>
                     <ul class="flexblock features">
                         <li>
                             <div>
                                 <h2>
                                     Use Docker
                                 </h2>
-                                Docker is awesome to isolate you experiement and model dependencies
+                                Docker is awesome to isolate your experiement and model dependencies
                             </div>
                         </li>
                         <li>
@@ -1131,7 +1130,7 @@
                                 <h2>
                                     Use Kubernetes
                                 </h2>
-                                Kubernetes is awesome orchestrat your workload
+                                Kubernetes is awesome to orchestrate your workload
                             </div>
                         </li>
                         <li>
@@ -1155,7 +1154,7 @@
                                 <h2>
                                     Use Word2Vec/Doc2Vec
                                 </h2>
-                                To find semantic in text
+                                To find semantics in text
                             </div>
                         </li>
                         <li>
